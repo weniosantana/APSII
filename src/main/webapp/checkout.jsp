@@ -5,12 +5,39 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+    <link href="style3.css" rel="stylesheet">
+
 </head>
 <body>
-	<form action='/APSII/check_out'>
-		<label>Digite o ID do Quarto para Check-out:</label>
-		<input type="text" name="IDch">
-		<br><input class="btn" type="submit" value="CHECKOUT"> 
-	</form>
+<div class="header">
+
+ <p class="titulo">HOTEL TRANSILVÂNIA</p>
+    
+         <div class="menu">
+            <p><a href="index.jsp">Home</a></p>
+            <p><a href="consCheck.jsp">Consultar Check-in/Out</a> </p>
+            <p><a href="checkin.jsp">Check-in</a> </p>
+            <p><a href="checkout.jsp">Check-out</a> </p>
+          
+        </div>
+       
+       
+    </div>
+
+    <div class="sobreLogin">
+        <div class="sobreC">
+            <div class="login">
+				<form action='/APSII/check_out' class="formula">
+					<label>Digite o Nº do Quarto para Check-out:</label>
+					<input type="text" name="IDch">
+					<br><input class="btn" type="submit" value="CHECKOUT"> 
+					
+			</form>
+			
+			
+			 </div>
+        </div>
+        
+    </div>
 </body>
 </html>

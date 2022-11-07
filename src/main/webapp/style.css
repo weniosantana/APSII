@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    
 }
 
 .header{
@@ -25,8 +26,8 @@ body{
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 22px;
-        width: 750px;
-        height: 95px;
+        width: 650px;
+        height: 85px;
         margin-right: 60px;
         padding-top: 10px;
     }
@@ -166,18 +167,17 @@ body{
 
 .formula{
     font-family: Arial, Helvetica, sans-serif;
-    margin-top:5%;
+    margin-top:25%;
     font-size: 25px;
-    margin-left: 30%;
+    margin-left: 50%;
     padding-top: 50px;
     padding-left: 90px;
     width: 600px;
-    height: 220px;
+    height: 550px;
     color: rgba(131, 131, 131, 0.938);
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
 }
-
 .formula input{
     margin-top: 20px;
     margin-bottom: 20px;

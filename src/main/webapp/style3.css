@@ -1,5 +1,7 @@
 body{
     margin: 0;
+   	background-color: #e5a54a;
+   
 }
 
 .header{
@@ -172,7 +174,7 @@ body{
     padding-top: 50px;
     padding-left: 90px;
     width: 600px;
-    height: 220px;
+    height: 250px;
     color: rgba(131, 131, 131, 0.938);
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -180,7 +182,7 @@ body{
 
 .formula input{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     height: 30px;
     width: 500px;
     border: 0px;

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/style2.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
 	<meta charset="ISO-8859-1">
 	<title>CHECK-IN</title>
 </head>
@@ -13,10 +13,10 @@
         <p class="titulo">HOTEL TRANSILVÂNIA</p>
     
         <div class="menu">
-            <p><a href="index.jsp">Home</a></p>
-            <p><a href="consCheck.jsp">Consultar Check-in</a> </p>
+           <p><a href="index.jsp">Home</a></p>
+            <p><a href="consCheck.jsp">Consultar Check-in/Out</a> </p>
             <p><a href="checkin.jsp">Check-in</a> </p>
-          
+            <p><a href="checkout.jsp">Check-out</a> </p>
         </div>
        
     </div>

@@ -25,11 +25,11 @@ DROP TABLE IF EXISTS `cadastro`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cadastro` (
-  `IDQuarto` int NOT NULL,
+  `IDQuarto` int DEFAULT NULL,
   `NomeCad` varchar(45) DEFAULT NULL,
-  `CPFcad` varchar(45) DEFAULT NULL,
+  `CPFcad` varchar(45) NOT NULL,
   `Datacad` date DEFAULT NULL,
-  PRIMARY KEY (`IDQuarto`)
+  PRIMARY KEY (`CPFcad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,7 +39,7 @@ CREATE TABLE `cadastro` (
 
 LOCK TABLES `cadastro` WRITE;
 /*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
-INSERT INTO `cadastro` VALUES (1,'weee','515524','2022-11-03'),(2,'assaasas','432332','2022-11-03'),(3,'Wenio Sousa','42323232','2022-11-04');
+INSERT INTO `cadastro` VALUES (3,'Isaac','4736463727','2022-11-05');
 /*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,10 +51,11 @@ DROP TABLE IF EXISTS `check_out`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `check_out` (
-  `IDquarto` int NOT NULL,
-  `check_out` date DEFAULT NULL,
-  `nome` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`IDquarto`)
+  `IDquarto` int DEFAULT NULL,
+  `NomeCad` varchar(45) DEFAULT NULL,
+  `CPFcad` varchar(45) NOT NULL,
+  `Checkout` datetime DEFAULT NULL,
+  PRIMARY KEY (`CPFcad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -64,8 +65,13 @@ CREATE TABLE `check_out` (
 
 LOCK TABLES `check_out` WRITE;
 /*!40000 ALTER TABLE `check_out` DISABLE KEYS */;
+INSERT INTO `check_out` VALUES (2,'Wenio Sousa Santana','51552789888','2022-11-07 17:29:24'),(1,'Joao vitor','6354762153','2022-11-07 17:29:24');
 /*!40000 ALTER TABLE `check_out` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'base_dados'
+--
 
 --
 -- Dumping routines for database 'base_dados'
@@ -80,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-04 14:58:08
+-- Dump completed on 2022-11-07 17:31:00
