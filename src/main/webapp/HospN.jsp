@@ -6,7 +6,7 @@
     <link href="style3.css" rel="stylesheet">
 
 <meta charset="ISO-8859-1">
-<title>CONSULTAR CHECK-IN</title>
+<title>CHECK-IN</title>
 </head>
 <body>
 <div class="header">
@@ -26,9 +26,7 @@
         <div class="sobreC">
             <div class="login">
 	               <form action="/APSII/consulCheck" class="formula">
-							<label>Digite o número do quarto:</label>
-							<input type="text" name="IDQuartoOut">
-							<input class="btn" type="submit" value="CONSULTAR">		
+							<h1>HÓSPEDE<br> NÃO EXISTE!</h1>
 						</form>
 
                 

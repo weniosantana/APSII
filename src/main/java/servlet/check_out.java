@@ -41,6 +41,9 @@ public class check_out extends HttpServlet {
 			
 			conn = DB.getConnection();
 			
+			if(request.getParameter("IDch")=="") {
+				response.sendRedirect("PrenCheck.jsp");
+			}else {
 			Integer IDQuarto = Integer.parseInt(request.getParameter("IDch"));
 			
 			st = conn.prepareStatement("SELECT * FROM base_dados.cadastro WHERE (`IDQuarto` = ?)");
@@ -74,7 +77,7 @@ public class check_out extends HttpServlet {
 			response.sendRedirect("checkOutSuc.jsp");  
 
 		
-			
+			}
 			
 			
 			}catch(SQLException e){

@@ -26,7 +26,7 @@
             <div class="login">
 	                <form action="/APSII/check_in" class="formula">
 	                 <div class="daRe">
-						<label>Digite o numero do quarto:</label>
+						<label>Digite o número do quarto:</label>
 						<input type="text" name="IDQuarto">
 					</div>
 					<div class="daRe">
@@ -34,13 +34,13 @@
 						<input type="text" name="NomeCad">
 					</div>
 					<div class="daRe">
-						<label>Digite o CPF (Apenas numeros)</label>
+						<label>Digite o CPF:</label>
 						<input type="text" name="CPFcad">
 					</div>
 					<div class="daRe">
-						<label>Data do Check-in</label>
+						<label>Data do Check-in:</label>
 						<input type="text" name="Datacad">
-						<input class="btn" type="submit" value="Check-in">		
+						<input class="btn" type="submit" value="CHECK-IN">		
 					</div>
 	
 		</form>

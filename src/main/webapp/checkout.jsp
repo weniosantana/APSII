@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>CHECK-OUT</title>
     <link href="style3.css" rel="stylesheet">
 
 </head>
@@ -30,7 +30,7 @@
 				<form action='/APSII/check_out' class="formula">
 					<label>Digite o Nº do Quarto para Check-out:</label>
 					<input type="text" name="IDch">
-					<br><input class="btn" type="submit" value="CHECKOUT"> 
+					<br><input class="btn" type="submit" value="CHECK-OUT"> 
 					
 			</form>
 			

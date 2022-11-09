@@ -36,30 +36,44 @@ public class check_in extends HttpServlet {
 
 		Connection conn = null;
 		PreparedStatement st = null;	
-		
+		String vaz = "";
+		Integer IDQuarto = null;
+		String CPFCad = "";
+		String NomeCad = "";
+		String data = null;
+		String dia = null;
+		String mes = null;
+		String ano = null;
 		try {
 			
 			conn = DB.getConnection();
+			if(request.getParameter("IDQuarto")=="" || request.getParameter("NomeCad") == "" || request.getParameter("CPFcad")=="" || request.getParameter("Datacad")=="") {
+			}else {	
+			IDQuarto = Integer.parseInt(request.getParameter("IDQuarto"));
+			NomeCad = request.getParameter("NomeCad");
+			CPFCad = request.getParameter("CPFcad");
+			if(request.getParameter("Datacad")!="") {
+			dia = request.getParameter("Datacad").substring(0,2);
+			mes = request.getParameter("Datacad").substring(3, 5);
+			ano = request.getParameter("Datacad").substring(6);
 			
-			Integer IDQuarto = Integer.parseInt(request.getParameter("IDQuarto"));
-			String NomeCad = request.getParameter("NomeCad");
-			String CPFCad = request.getParameter("CPFcad");
-			String dia = request.getParameter("Datacad").substring(0,2);
-			String mes = request.getParameter("Datacad").substring(3, 5);
-			String ano = request.getParameter("Datacad").substring(6);
-			String data = ano + "-" + mes + "-" + dia;
-			
-			st = conn.prepareStatement(
-					"Insert into cadastro (IDQuarto, NomeCad, CPFcad, Datacad) values (?,?,?,?)"
-					);
-			
-			st.setInt(1, IDQuarto);
-			st.setString(2, NomeCad);
-			st.setString(3, CPFCad);
-			st.setString(4, data);
-			st.executeUpdate();
-			response.sendRedirect("CheckSuc.jsp");  
-
+			data = ano + "-" + mes + "-" + dia;}
+			}
+			if(request.getParameter("IDQuarto").equals(vaz) || request.getParameter("NomeCad").equals(vaz)|| request.getParameter("CPFcad").equals(vaz) || request.getParameter("Datacad").equals(vaz) ) {
+				response.sendRedirect("PrenCheck.jsp");
+			}else {
+				st = conn.prepareStatement(
+						"Insert into cadastro (IDQuarto, NomeCad, CPFcad, Datacad) values (?,?,?,?)"
+						);
+				
+				st.setInt(1, IDQuarto);
+				st.setString(2, NomeCad);
+				st.setString(3, CPFCad);
+				st.setString(4, data);
+				st.executeUpdate();
+				response.sendRedirect("CheckSuc.jsp");  
+				
+			}
 			}catch(SQLException e){
 			e.printStackTrace();
 			

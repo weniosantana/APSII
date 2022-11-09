@@ -39,7 +39,7 @@ CREATE TABLE `cadastro` (
 
 LOCK TABLES `cadastro` WRITE;
 /*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
-INSERT INTO `cadastro` VALUES (3,'Isaac','4736463727','2022-11-05');
+INSERT INTO `cadastro` VALUES (4,'Anna Oliveira','098.983.234-70','2022-04-20'),(2,'Isaac','489.645.823-88','2022-10-03'),(1,'Wenio Sousa Santana','515.527.898-88','2022-11-03');
 /*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,6 @@ CREATE TABLE `check_out` (
 
 LOCK TABLES `check_out` WRITE;
 /*!40000 ALTER TABLE `check_out` DISABLE KEYS */;
-INSERT INTO `check_out` VALUES (2,'Wenio Sousa Santana','51552789888','2022-11-07 17:29:24'),(1,'Joao vitor','6354762153','2022-11-07 17:29:24');
 /*!40000 ALTER TABLE `check_out` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-07 17:31:00
+-- Dump completed on 2022-11-09 11:28:43
