@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>CHECK-OUT</title>
-    <link href="style3.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
 
 </head>
 <body>
@@ -28,7 +28,7 @@
         <div class="sobreC">
             <div class="login">
 				<form action='/APSII/check_out' class="formula">
-					<label>Digite o Nº do Quarto para Check-out:</label>
+					<label>Digite o ID da reserva:</label><br>
 					<input type="text" name="IDch">
 					<br><input class="btn" type="submit" value="CHECK-OUT"> 
 					

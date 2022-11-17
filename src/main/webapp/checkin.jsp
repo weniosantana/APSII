@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="style2.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
 	<meta charset="ISO-8859-1">
 	<title>CHECK-IN</title>
 </head>

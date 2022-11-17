@@ -1,5 +1,7 @@
 body{
     margin: 0;
+   	background-color: #e5a54a;
+	height: 100%;
 }
 
 .header{
@@ -168,7 +170,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin-top:5%;
     font-size: 25px;
-    margin-left: 10%;
+    margin-left: 45%;
     padding-top: 50px;
     padding-left: 90px;
     width: 600px;

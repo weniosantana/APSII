@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="servlet.check_in" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="style3.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
 
 <meta charset="ISO-8859-1">
 <title>CONSULTAR CHECK-IN</title>
@@ -27,6 +28,8 @@
             <div class="login">
 	               <form action="/APSII/consulCheck" class="formula">
 							<h1>CHECK-IN <br>FEITO COM SUCESSO!</h1>
+								
+						
 						</form>
 
                 

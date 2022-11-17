@@ -1,20 +1,22 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Date;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import servlet.check_in;
 import db.DB;
 
 @WebServlet("/check_out")
@@ -41,11 +43,9 @@ public class check_out extends HttpServlet {
 			
 			conn = DB.getConnection();
 			
-			if(request.getParameter("IDch")=="") {
-				response.sendRedirect("PrenCheck.jsp");
-			}else {
-			Integer IDQuarto = Integer.parseInt(request.getParameter("IDch"));
 			
+			Integer IDQuarto = Integer.parseInt(request.getParameter("IDch"));
+			/*
 			st = conn.prepareStatement("SELECT * FROM base_dados.cadastro WHERE (`IDQuarto` = ?)");
 			st.setInt(1, IDQuarto);
 			
@@ -57,27 +57,28 @@ public class check_out extends HttpServlet {
 				sele.add(rs.getString("Datacad"));
 				
 			}
-			
+			*/
 			st1 = conn.prepareStatement(
-					"Insert into check_out (IDQuarto, NomeCad, CPFcad, checkout) values (?,?,?,?)"
+					"update tb_reserva set data_checkout = ? where id_reserva = ?;"
 					);
 			
-			st1.setInt(1, Integer.parseInt(sele.get(0)));
-			st1.setString(2, sele.get(1));
-			st1.setString(3, sele.get(2));
-			st1.setString(4, data_hora);
+			st1.setString(1, data_hora);
+			st1.setInt(2, IDQuarto);
+		
 			st1.executeUpdate();
+			/*
 			st1 = conn.prepareStatement(
 					"DELETE FROM cadastro WHERE IDQuarto = ?"
 					);
 			st1.setInt(1, Integer.parseInt(sele.get(0)));
 
 			st1.executeUpdate();
+			*/
 			
-			response.sendRedirect("checkOutSuc.jsp");  
+			response.sendRedirect("checkOutSuc.jsp");
 
 		
-			}
+			
 			
 			
 			}catch(SQLException e){

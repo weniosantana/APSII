@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="style3.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
 
 <meta charset="ISO-8859-1">
 <title>CONSULTAR CHECK-IN</title>
@@ -26,11 +26,14 @@
         <div class="sobreC">
             <div class="login">
 	               <form action="/APSII/consulCheck" class="formula">
-							<label>Digite o número do quarto:</label>
+							<label>Digite o ID da reserva:</label><br>
 							<input type="text" name="IDQuartoOut">
 							<input class="btn" type="submit" value="CONSULTAR">		
 						</form>
-
+					 <form action="/APSII/consulCheckNQuarto" class="formula">
+							<label>Consultar ID das Reservas:</label>
+							<input class="btn" type="submit" value="CONSULTAR">		
+						</form>
                 
                 
             </div>

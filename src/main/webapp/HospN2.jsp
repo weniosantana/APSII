@@ -26,7 +26,7 @@
         <div class="sobreC">
             <div class="login">
 	               <form action="/APSII/consulCheck" class="formula">
-							<h1>HÓSPEDE<br> NÃO EXISTE!</h1>
+							<h1>NENHUMA<br>RESERVA!</h1>
 						</form>
 
                 
