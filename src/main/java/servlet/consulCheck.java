@@ -36,24 +36,25 @@ public class consulCheck extends HttpServlet {
 			IDQ =request.getParameter("IDQuartoOut");
 			conn = DB.getConnection();
 		
-			st = conn.prepareStatement("SELECT * FROM base_dados.cadastro WHERE (`IDQuarto` = ?)");
+			st = conn.prepareStatement("SELECT * FROM hotel.tb_reserva WHERE (`id_reserva` = ?)");
 			st.setString(1, IDQ);
 			rs = st.executeQuery();	 
 				while(rs.next()) {
-					sele.add(rs.getString("IDQuarto"));
-					sele.add(rs.getString("NomeCad"));
-					sele.add(rs.getString("CPFcad"));
-					sele.add(rs.getString("Datacad"));
+					sele.add(rs.getString("id_reserva"));
+					sele.add(rs.getString("cpf"));
+					sele.add(rs.getString("num_quarto"));
+					sele.add(rs.getString("data_checkin"));
+					sele.add(rs.getString("data_checkout"));
 					
 				}
-			st = conn.prepareStatement("SELECT * FROM base_dados.check_out WHERE (`IDquarto` = ?)");
-			st.setString(1, IDQ);
+				st = conn.prepareStatement("SELECT * FROM hotel.tb_reserva WHERE (`id_reserva` = ?)");			st.setString(1, IDQ);
 				rs = st.executeQuery();	 
 					while(rs.next()) {
-						sele.add(rs.getString("IDquarto"));
-						sele.add(rs.getString("NomeCad"));
-						sele.add(rs.getString("CPFcad"));
-						sele.add(rs.getString("Checkout"));
+						sele.add(rs.getString("id_reserva"));
+						sele.add(rs.getString("cpf"));
+						sele.add(rs.getString("num_quarto"));
+						sele.add(rs.getString("data_checkin"));
+						sele.add(rs.getString("data_checkout"));
 						
 					}   
 
